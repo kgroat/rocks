@@ -1,0 +1,17 @@
+{
+  "name": "rocks",
+  "version": "1.0.0",
+  "description": "rocks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "rocks"
+  ],
+  "authors": [
+    "kgroat(Kevin Groat)<apps@kevingroat.io>",
+    "laughingllama(Jacob Bowman)"
+  ],
+  "license": "ISC"
+}
