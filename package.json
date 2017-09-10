@@ -4,7 +4,7 @@
   "description": "rocks",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"webpack-dev-server\" \"sleepms 2000 & opn http://localhost:8080/\"",
+    "start": "concurrently \"webpack-dev-server\" \"sleepms 3000 && opn http://localhost:8080/\"",
     "test": "jest"
   },
   "keywords": [
