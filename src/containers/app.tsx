@@ -4,18 +4,20 @@ import { Provider } from 'react-redux'
 
 import store from '../redux/store'
 
-import VisibilityComponent from './visibilityComponent'
+import ActionComponent from './actionComponent'
+import ActionResponseComponent from './actionResponseComponent'
 import EquipmentComponent from './equipmentComponent'
-import SearchComponent from './searchComponent'
+import VisibilityComponent from './visibilityComponent'
 
 export default () => {
   return (
     <div>
       <Provider store={store}>
         <div>
+          <ActionResponseComponent />
           <VisibilityComponent />
           <EquipmentComponent />
-          <SearchComponent />
+          <ActionComponent />
         </div>
       </Provider>
     </div>
