@@ -12,5 +12,5 @@ export interface SizeRange {
 export interface ShapeSchema {
   name: string
   article: 'a'|'an'
-  size: RangeSchema<SizeRange>
+  size: RangeSchema<SizeRange> | SizeRange
 }

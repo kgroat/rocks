@@ -1,9 +1,11 @@
 
-export interface TransformationProduct {
+export type TransformationName = 'smash'
 
+export interface TransformationProduct {
+  
 }
 
 export interface TransformationSchema {
-  name: string
+  name: TransformationName
   products: TransformationProduct[]
 }

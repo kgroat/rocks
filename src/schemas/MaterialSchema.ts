@@ -9,7 +9,7 @@ export interface ColorRange {
 }
 
 export interface MaterialSchema {
-  color: RangeSchema<ColorRange>
-  density: RangeSchema<NumberRange>
-  hardness: RangeSchema<NumberRange>
+  color: RangeSchema<ColorRange> | ColorRange
+  density: RangeSchema<NumberRange> | NumberRange
+  hardness: RangeSchema<NumberRange> | NumberRange
 }
