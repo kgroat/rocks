@@ -1,6 +1,8 @@
 
 import * as convert from 'color-convert'
 
+import { rangeRandomWithModulus } from '../../helpers'
+
 export interface ColorDefinition {
   name: string
   h: number[],
@@ -13,8 +15,8 @@ const SAT_MAX = 100
 const VAL_MAX = 100
 
 export function generateColor ({ h, s, v }: ColorDefinition) {
-  const ch = ((Math.random() * (h[1] - h[0]) + h[0]) + HUE_MAX) % HUE_MAX
-  const cs = ((Math.random() * (s[1] - s[0]) + s[0]) + SAT_MAX) % SAT_MAX
-  const cv = ((Math.random() * (v[1] - v[0]) + v[0]) + VAL_MAX) % VAL_MAX
+  const ch = rangeRandomWithModulus(h[0], h[1], HUE_MAX)
+  const cs = rangeRandomWithModulus(s[0], s[1], SAT_MAX)
+  const cv = rangeRandomWithModulus(v[0], v[1], VAL_MAX)
   return convert.hsv.hex([ch, cs, cv])
 }

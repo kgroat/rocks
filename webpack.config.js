@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    './src/index.ts'
+    './src/index.tsx'
   ],
   devServer: {
     contentBase: path.join(__dirname, "static"),

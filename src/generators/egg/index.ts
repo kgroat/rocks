@@ -1,0 +1,2 @@
+
+export { generateEgg } from './eggGenerator'

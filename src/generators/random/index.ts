@@ -1,0 +1,2 @@
+
+export { generateRandom } from './randomGenerator'

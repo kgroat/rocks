@@ -1,6 +1,8 @@
 
-import { Rock } from '../../interfaces/rock'
+import { Item } from '../../interfaces/item'
 
 export interface State {
-  rocks: Rock[]
+  visible: Item
+  leftHand: Item
+  rightHand: Item
 }

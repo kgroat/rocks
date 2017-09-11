@@ -1,0 +1,2 @@
+
+export { generateRock } from './rockGenerator'
