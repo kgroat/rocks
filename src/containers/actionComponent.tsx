@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { connect, Dispatch } from 'react-redux'
 
-import { generateRandom } from '../generators/random'
+import { generateRandom } from '../generators/items'
 import { Item } from '../interfaces/item'
 
 import setVisible from '../redux/actions/setVisible'

@@ -1,0 +1,74 @@
+{
+  "id": "fruit",
+  "randomWeight": 1,
+  "typeCount": 5,
+  "flags": [
+    {
+      "name": "sweet",
+      "priority": 0,
+      "blacklist": []
+    },
+    {
+      "name": "fibrous",
+      "priority": 0,
+      "blacklist": []
+    },
+    {
+      "name": "skinned",
+      "priority": 0,
+      "blacklist": ["peely"]
+    },
+    {
+      "name": "peely",
+      "priority": 0,
+      "blacklist": ["skinned"]
+    }
+  ],
+  "shape": {
+    "name": "fruit",
+    "article": "a",
+    "size": {
+      "range": {
+        "length": [1, 10],
+        "width": [1, 10],
+        "height": [1, 10],
+        "scale": [5, 300]
+      },
+      "varianceRange": {
+        "length": [0, 2],
+        "width": [0, 2],
+        "height": [0, 2],
+        "scale": [5, 20]
+      }
+    }
+  },
+  "material": {
+    "color": {
+      "range": {
+        "h": [-360, 360],
+        "s": [80, 100],
+        "v": [80, 100]
+      },
+      "varianceRange": {
+        "h": [10, 50],
+        "s": [5, 20],
+        "v": [5, 20]
+      }
+    },
+    "density": {
+      "range": [1, 2],
+      "varianceRange": [0.1, 0.5]
+    },
+    "hardness": {
+      "range": [0.1, 1],
+      "varianceRange": [0, 0.25]
+    }
+  },
+  "children": [],
+  "transformations": [
+    {
+      "name": "smash",
+      "products": []
+    }
+  ]
+}

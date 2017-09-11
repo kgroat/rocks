@@ -1,2 +1,0 @@
-
-export { generateEgg } from './eggGenerator'

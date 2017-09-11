@@ -1,0 +1,64 @@
+{
+  "id": "rock",
+  "randomWeight": 3,
+  "typeCount": 5,
+  "flags": [
+    {
+      "name": "ore",
+      "priority": 0,
+      "blacklist": ["flux"]
+    },
+    {
+      "name": "flux",
+      "priority": 0,
+      "blacklist": ["ore"]
+    }
+  ],
+  "shape": {
+    "name": "rock",
+    "article": "a",
+    "size": {
+      "range": {
+        "length": [1, 10],
+        "width": [1, 10],
+        "height": [1, 10],
+        "scale": [5, 500]
+      },
+      "varianceRange": {
+        "length": [0, 9],
+        "width": [0, 9],
+        "height": [0, 9],
+        "scale": [200, 495]
+      }
+    }
+  },
+  "material": {
+    "color": {
+      "range": {
+        "h": [-360, 360],
+        "s": [0, 100],
+        "v": [0, 100]
+      },
+      "varianceRange": {
+        "h": [30, 180],
+        "s": [5, 40],
+        "v": [20, 60]
+      }
+    },
+    "density": {
+      "range": [2, 10],
+      "varianceRange": [0, 3]
+    },
+    "hardness": {
+      "range": [2, 5],
+      "varianceRange": [0, 1.5]
+    }
+  },
+  "children": [],
+  "transformations": [
+    {
+      "name": "smash",
+      "products": []
+    }
+  ]
+}

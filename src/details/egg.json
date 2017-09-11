@@ -1,0 +1,69 @@
+{
+  "id": "egg",
+  "randomWeight": 1,
+  "typeCount": 5,
+  "flags": [
+    {
+      "name": "speckled",
+      "priority": 0,
+      "blacklist": []
+    },
+    {
+      "name": "rough",
+      "priority": 0,
+      "blacklist": []
+    },
+    {
+      "name": "smooth",
+      "priority": 0,
+      "blacklist": []
+    }
+  ],
+  "shape": {
+    "name": "egg",
+    "article": "an",
+    "size": {
+      "range": {
+        "length": [1, 2],
+        "width": [1, 1.1],
+        "height": [1, 1.1],
+        "scale": [20, 120]
+      },
+      "varianceRange": {
+        "length": [0, 0.3],
+        "width": [0, 0.1],
+        "height": [0, 0.1],
+        "scale": [3, 40]
+      }
+    }
+  },
+  "material": {
+    "color": {
+      "range": {
+        "h": [-360, 360],
+        "s": [0, 100],
+        "v": [50, 100]
+      },
+      "varianceRange": {
+        "h": [5, 20],
+        "s": [5, 25],
+        "v": [5, 20]
+      }
+    },
+    "density": {
+      "range": [0.9, 1.1],
+      "varianceRange": [0, 0.2]
+    },
+    "hardness": {
+      "range": [0.1, 0.5],
+      "varianceRange": [0, 0.1]
+    }
+  },
+  "children": [],
+  "transformations": [
+    {
+      "name": "smash",
+      "products": []
+    }
+  ]
+}
