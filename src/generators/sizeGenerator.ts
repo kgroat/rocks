@@ -2,7 +2,7 @@
 import * as convert from 'color-convert'
 
 import { Size } from '../interfaces'
-import { SizeRange } from '../schemas'
+import { SizeRange } from '../schemaDefinitions/items'
 import { generateRandomNumber } from './randomNumberGenerator'
 
 export function generateSize (range: SizeRange): Size {

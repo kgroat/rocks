@@ -1,0 +1,48 @@
+{
+  "id": "egg:yolk",
+  "flags": [
+    {
+      "name": "speckled",
+      "priority": 0,
+      "blacklist": []
+    },
+    {
+      "name": "thick",
+      "priority": 0,
+      "blacklist": []
+    }
+  ],
+  "shape": {
+    "name": "egg yolk",
+    "article": "an"
+  },
+  "material": {
+    "color": {
+      "range": {
+        "h": [45, 55],
+        "s": [50, 100],
+        "v": [75, 90]
+      },
+      "varianceRange": {
+        "h": [0, 10],
+        "s": [5, 25],
+        "v": [0, 15]
+      }
+    },
+    "density": {
+      "range": [0.9, 1.1],
+      "varianceRange": [0, 0.2]
+    },
+    "hardness": {
+      "range": [0.02, 0.05],
+      "varianceRange": [0, 0.03]
+    }
+  },
+  "children": [],
+  "transformations": [
+    {
+      "name": "smash",
+      "products": []
+    }
+  ]
+}

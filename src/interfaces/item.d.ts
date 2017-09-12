@@ -1,9 +1,14 @@
 
 import { Material } from './material'
 import { Shape } from './shape'
+import { ItemGeneratable } from './generatables'
+import { ActionUsabilityMap } from './actionUsabilityMap'
 
 export interface Item {
-  id: string
-  material: Material
-  shape: Shape
+  readonly id: string
+  readonly flags: string[]
+  readonly material: Material
+  readonly shape: Shape
+  readonly type: ItemGeneratable
+  readonly actions: ActionUsabilityMap
 }

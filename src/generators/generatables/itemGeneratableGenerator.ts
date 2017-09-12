@@ -1,13 +1,13 @@
 
 import * as uuid from 'uuid/v4'
 
-import { RootSchema } from '../../schemas'
-import { RootGeneratable } from '../../interfaces/generatables'
+import { ItemSchema } from '../../schemaDefinitions/items'
+import { ItemGeneratable } from '../../interfaces/generatables'
 
 import { generateShapeGeneratable } from './shapeGeneratableGenerator'
 import { generateMaterialGeneratable } from './materialGeneratableGenerator'
 
-export function generateRootGeneratable(schema: RootSchema): RootGeneratable {
+export function generateItemGeneratable(schema: ItemSchema): ItemGeneratable {
   return {
     id: uuid(),
     flags: [],

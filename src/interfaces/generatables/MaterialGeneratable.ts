@@ -1,9 +1,9 @@
 
-import { ColorRange, NumberRange } from '../../schemas'
+import { ColorRange, NumberRange } from '../../schemaDefinitions/items'
 
 export interface MaterialGeneratable {
-  id: string
-  color: ColorRange
-  density: NumberRange
-  hardness: NumberRange
+  readonly id: string
+  readonly color: ColorRange
+  readonly density: NumberRange
+  readonly hardness: NumberRange
 }

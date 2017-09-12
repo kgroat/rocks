@@ -1,6 +1,6 @@
 
-import { SizeRange } from '../../schemas'
+import { SizeRange } from '../../schemaDefinitions/items'
 
 export interface ShapeGeneratable {
-  size: SizeRange
+  readonly size: SizeRange
 }

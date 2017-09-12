@@ -1,7 +1,7 @@
 
 import * as convert from 'color-convert'
 
-import { ColorRange } from '../schemas'
+import { ColorRange } from '../schemaDefinitions/items'
 import { generateRandomNumberWithModulus } from './randomNumberGenerator'
 
 const HUE_MAX = 360

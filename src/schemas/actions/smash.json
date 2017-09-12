@@ -1,0 +1,26 @@
+{
+  "id": "smash",
+  "button": "Smash!",
+  "usable": {
+    "items": [
+      {
+        "name": "item1"
+      },
+      {
+        "name": "item2"
+      }
+    ]
+  },
+  "transformations": [
+    {
+      "transformation": "crush",
+      "target": "item1",
+      "condition": ["item1.material.hardness", "<=", "item2.material.hardness"]
+    },
+    {
+      "transformation": "crush",
+      "target": "item2",
+      "condition": ["item2.material.hardness", "<=", "item1.material.hardness"]
+    }
+  ]
+}

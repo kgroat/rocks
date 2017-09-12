@@ -1,7 +1,7 @@
 
 import * as convert from 'color-convert'
 
-import { NumberRange, RangeSchema } from '../schemas'
+import { NumberRange, RangeSchema } from '../schemaDefinitions/items'
 import { generateRange } from './rangeGenerator'
 
 export function generateGroupRange <T extends { [key: string]: NumberRange }>({ range, varianceRange }: RangeSchema<T>): T {

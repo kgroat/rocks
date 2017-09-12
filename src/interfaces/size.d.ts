@@ -1,7 +1,7 @@
 
 export interface Size {
-  length: number
-  width: number
-  height: number
-  scale: number
+  readonly length: number
+  readonly width: number
+  readonly height: number
+  readonly scale: number
 }

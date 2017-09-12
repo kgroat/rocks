@@ -1,7 +1,7 @@
 
 
 
-import { MaterialSchema } from '../schemas'
+import { MaterialSchema } from '../schemaDefinitions/items'
 import { MaterialGeneratable } from '../interfaces/generatables'
 import { Material } from '../interfaces'
 

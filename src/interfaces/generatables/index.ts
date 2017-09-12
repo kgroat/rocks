@@ -1,4 +1,4 @@
 
 export { MaterialGeneratable } from './MaterialGeneratable'
-export { RootGeneratable } from './RootGeneratable'
+export { ItemGeneratable } from './ItemGeneratable'
 export { ShapeGeneratable } from './ShapeGeneratable'

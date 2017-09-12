@@ -59,11 +59,34 @@
       "varianceRange": [0, 0.1]
     }
   },
-  "children": [],
+  "children": [
+    {
+      "id": "yolk",
+      "schema": "egg:yolk",
+      "shape": {
+        "size": {
+          "length": ["egg.shape.size.length * 0.7", "egg.shape.size.length * 0.9"],
+          "width": ["egg.shape.size.width * 0.7", "egg.shape.size.width * 0.9"],
+          "height": ["egg.shape.size.length * 0.7", "egg.shape.size.length * 0.9"],
+          "scale": ["egg.shape.size.scale"]
+        }
+      },
+      "visible": false
+    }
+  ],
   "transformations": [
     {
-      "name": "smash",
-      "products": []
+      "name": "crush",
+      "products": [
+        {
+          "id": "egg",
+          "transformations": ["destroy"]
+        },
+        {
+          "id": "egg:yolk",
+          "transformations": ["crush"]
+        }
+      ]
     }
   ]
 }

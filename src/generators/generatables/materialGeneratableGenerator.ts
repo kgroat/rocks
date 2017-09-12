@@ -1,34 +1,24 @@
 
 import * as uuid from 'uuid/v4'
 
-import { MaterialSchema, ColorRange, RangeSchema, NumberRange } from '../../schemas'
+import { MaterialSchema, ColorRange, RangeSchema, NumberRange } from '../../schemaDefinitions/items'
 import { MaterialGeneratable } from '../../interfaces/generatables'
 
 import { generateGroupRange } from '../groupRangeGenerator'
-import { generateRange } from '../rangeGenerator'
+import { generateRangeFromSchema, unfurlRange } from '../rangeGenerator'
 
-export function generateMaterialGeneratable(schema: MaterialSchema): MaterialGeneratable {
-  let color: ColorRange
-  let density: NumberRange
-  let hardness: NumberRange
+const DEFAULT_COLOR_RANGE: ColorRange = {
+  h: [0, 360],
+  s: [0, 100],
+  v: [0, 100]
+}
 
-  if (schema.color['range'] instanceof Array) {
-    color = generateGroupRange(schema.color as RangeSchema<ColorRange>)
-  } else {
-    color = schema.color as ColorRange
-  }
+const DEFAULT_NUMBER_RANGE: NumberRange = [0, 0]
 
-  if (schema.density instanceof Array) {
-    density = schema.density
-  } else {
-    density = generateRange(schema.density.range, schema.density.varianceRange)
-  }
-  
-    if (schema.hardness instanceof Array) {
-      hardness = schema.hardness
-    } else {
-      hardness = generateRange(schema.hardness.range, schema.hardness.varianceRange)
-    }
+export function generateMaterialGeneratable(schema: MaterialSchema, allowEmpty = false): MaterialGeneratable {
+  let color = unfurlRange(schema.color, generateGroupRange, allowEmpty ? DEFAULT_COLOR_RANGE : null)
+  let density = unfurlRange(schema.density, generateRangeFromSchema, allowEmpty ? DEFAULT_NUMBER_RANGE : null)
+  let hardness = unfurlRange(schema.hardness, generateRangeFromSchema, allowEmpty ? DEFAULT_NUMBER_RANGE : null)
 
   return {
     id: uuid(),

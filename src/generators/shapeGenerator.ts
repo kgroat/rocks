@@ -1,5 +1,5 @@
 
-import { ShapeSchema } from '../schemas'
+import { ShapeSchema } from '../schemaDefinitions/items'
 import { ShapeGeneratable } from '../interfaces/generatables'
 import { Shape } from '../interfaces'
 
